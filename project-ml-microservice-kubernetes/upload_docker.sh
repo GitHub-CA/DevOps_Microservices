@@ -7,9 +7,14 @@
 # Create dockerpath
 # dockerpath=<your docker ID/path>
 
+export dockerpath=dockercharuaggarwal/charu-devops-udacity 
+
+
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
 # Push image to a docker repository
+docker push dockercharuaggarwal/charu-devops-udacity
+
