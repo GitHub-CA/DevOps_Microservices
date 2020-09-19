@@ -5,12 +5,16 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
-export dockerpath=docker push dockercharuaggarwal/charu-devops-udacity
+export dockerpath=dockercharuaggarwal/charu-devops-udacity
 
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run ml-microservice --image=$dockerpath --port=80 --labels="app=ml-microservice"
+kubectl run ml-microservice\
+    --generator=run-pod/v1 \
+    --image=$dockerpath \
+    --port=80 \
+    --labels="app=ml-microservice"
 
 
 # Step 3:
